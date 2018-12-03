@@ -1,0 +1,161 @@
+<% provide(:title,"F.A.Q.") %>
+<!DOCTYPE html>
+<!--
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>F.A.Q.</h1>
+	  
+	  <h2>Why Kalypso?</h2>
+	  <center>Kalypso was a nymph in Greek mythology, who lived on the island of Ogygia, where she detained Odysseus for several years.</center>
+	  <center>The etymology of Kalypso's name is from καλύπτω (kalyptō), meaning "to hide".</center>
+	  <center>In modern days, Kalypso still love to hide, but she isn't anymore a nymph.</center>
+	  <h2>So... what is Kalypso?</h2>
+	  <center>Kalypso is a dynamic web app that allows you to encrypt messages. It uses Kerckhoffs principle: A cryptosystem should be secure even if everything about the system, except the key, is public knowledge.</center>
+	  <h2>How does she works?</h2>
+	  <center>Kalypso outputs a JSON string containing everything that needs to be saved for future decryption.</center>
+	  <h2>I forgot my password. What now?</h2>
+	  <center>Due to Kalypso's characteristics, user's security is an our focus. </br>To maximize system security, you have to 
+	  <a href="mailto:admin@kalypso.com?Subject=Password%20reset" target="_top">Contact Us</a> 
+	  with your account e-mail asking for a password reset.</center>
+	  <h2>Does she respect my privacy?</h2>
+	  <center>Kalypso encrypts your messages without saving them on her servers. She does not even store the encrypted results!</center>
+	  
+  </body>
+
+</html>
+-->
+
+<html lang="en" class="no-js">
+	<!-- 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/style.css"> 
+	<script src="js/modernizr.js"></script> 
+</head>
+<body>
+
+	-->
+	<head>
+		<script>
+		if (window.location.href.indexOf('reload')==-1) {
+     window.location.replace(window.location.href+'?reload');
+}
+		</script>
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	
+	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script> <!-- Resource jQuery -->
+</head>
+	
+	
+	<header>
+	<h1>F.A.Q.</h1>
+</header>
+<section class="cd-faq">
+	<ul class="cd-faq-categories">
+		<li><a class="selected" href="#basics">Basics</a></li>
+		<li><a href="#mobile">Mobile</a></li>
+		<li><a href="#account">Account</a></li>
+		<li><a href="#privacy">Privacy</a></li>
+	</ul> <!-- cd-faq-categories -->
+
+	<div class="cd-faq-items">
+		<ul id="basics" class="cd-faq-group"><br><br>
+			<li class="cd-faq-title"><h2>Basics</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">I forgot my password. How do I restore it?</a>
+				<div class="cd-faq-content">
+					<p>Due to Kalypso's characteristics, user's security is an our focus. </br>To restore your password, you have to 
+	  <%= link_to "follow this procedure", restore_path%>.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I sign up in Kalypso?</a>
+				<div class="cd-faq-content">
+					<p>It is necessary to Sign Up with username, e-mail and password. Kalypso does not store your password and does not use e-mail or username for anything.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">QR Code upload doesn't work?</a>
+				<div class="cd-faq-content">
+					<p>As a recent decision of GOQR, them doesn't allow Allow-Control-Allow-Origin request. So, if you are on Google Chrome and QR Code Upload doesn't work, we suggest you to install the plugin called <a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon">Allow-Control-Allow-Origin: *</a>.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="mobile" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Mobile</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">How does transfer work?</a>
+				<div class="cd-faq-content">
+					<p>We uses QR Code to transfer your CRYPTED message on your phone without passing on some server, it is a point-to-point connection.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I upload text files from my phone or tablet?</a>
+				<div class="cd-faq-content">
+					<p>You just need to click the download or upload button and write the correct encryption key.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="account" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Account</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I change my account settings (name, e-mail or password)?</a>
+				<div class="cd-faq-content">
+					<p>You can go to Settings -> Update your profile.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I delete my account?</a>
+				<div class="cd-faq-content">
+					<p>We let you to easily delete your own account. Just go to Settings -> Update your profile.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="privacy" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Privacy</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">Can I specify my own private encryption key?</a>
+				<div class="cd-faq-content">
+					<p>Yes, if you're a registered user you can chooce your key by typing it.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">I forgot my encryption key! Can I get it back?</a>
+				<div class="cd-faq-content">
+					<p>No, and if you don't remember it your messages (that have been encrypted with those key) are lost forever, Kalypso can't do anything because she doesn't store anything except your username and your email.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">Can I access my account data?</a>
+				<div class="cd-faq-content">
+					<p>Kalypso encrypts your messages without saving them on her servers. She does not even store the encrypted results!</br>
+				So, your data stored in Kalypso's servers are: your username, your e-mail and your crypted recovery answer. Anything else: no password, no caches, no messages, no encryption keys.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+</br></br></br></br><br><br>
+		</ul> <!-- cd-faq-group -->
+
+	</div> <!-- cd-faq-items -->
+	<a href="#0" class="cd-close-panel">Close</a>
+</section> <!-- cd-faq -->
+
+</body>
+</html>
